@@ -5,9 +5,10 @@ var path = require('path');
 var http = require("http");
 var fs = require("fs");
 var htmlRoutes = require('./app/routing/htmlRoutes.js')(app);
-var friends = require('./app/data/friends.js');
-var apiRoutes = require('./app/routing/apiRoutes.js');
+var apiRoutes = require('./app/routing/apiRoutes.js')(app);
 var PORT = 3000;
+
+//var PORT = process.env.PORT ll 8080
 
 
 
