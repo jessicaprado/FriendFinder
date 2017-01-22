@@ -1,10 +1,6 @@
-module.exports = function(app, fs, path) {
-var PORT = 3000;
 var path = require('path');
 
-app.listen(PORT, function(){
-	console.log("Listening on PORT " + PORT)
-});
+module.exports = function(app) {
 
 app.get('/', function(req, res){
 	 res.sendFile(path.join(__dirname + '/../public/home.html'));
